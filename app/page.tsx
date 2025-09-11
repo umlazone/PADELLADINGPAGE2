@@ -85,7 +85,7 @@ export default function SolversAILanding() {
 
   // WhatsApp contact function
   const handleWhatsAppContact = (message: string) => {
-    const whatsappNumber = "+573001234567" // Replace with your actual WhatsApp number
+    const whatsappNumber = "+573008505700" // Replace with your actual WhatsApp number
     const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
