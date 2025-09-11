@@ -83,6 +83,13 @@ export default function SolversAILanding() {
     })
   }
 
+  // WhatsApp contact function
+  const handleWhatsAppContact = (message: string) => {
+    const whatsappNumber = "+573001234567" // Replace with your actual WhatsApp number
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, "_blank")
+  }
+
   const content = {
     es: {
       nav: {
@@ -468,13 +475,6 @@ export default function SolversAILanding() {
               </div>
 
               <div className="hidden md:flex space-x-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-gray-600 hover:bg-gray-700 text-white bg-gray-800/80 hover:border-gray-500"
-                >
-                  {t.nav.login}
-                </Button>
               </div>
 
               <Button
@@ -525,13 +525,6 @@ export default function SolversAILanding() {
                   {t.nav.testimonials}
                 </a>
                 <div className="flex space-x-2 pt-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-gray-600 hover:bg-gray-700 text-white bg-gray-800/80"
-                  >
-                    {t.nav.login}
-                  </Button>
                 </div>
               </div>
             </div>
@@ -586,6 +579,12 @@ export default function SolversAILanding() {
               <Button
                 size="lg"
                 className="bg-blue-600 text-white hover:bg-blue-700 font-open-sans font-semibold shadow-lg border-2 border-blue-500"
+                onClick={() => {
+                  const message = language === "es" 
+                    ? "¡Hola! Me interesa conocer más sobre Solvers AI para mi club de pádel. Me gustaría agendar una consulta y recibir más información sobre sus servicios."
+                    : "Hello! I'm interested in learning more about Solvers AI for my paddle club. I would like to schedule a consultation and receive more information about your services."
+                  handleWhatsAppContact(message)
+                }}
               >
                 <MessageSquare className="mr-2 w-5 h-5" />
                 {t.hero.cta2}
@@ -769,7 +768,15 @@ export default function SolversAILanding() {
                   ))}
                 </ul>
 
-                <Button className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500">
+                <Button 
+                  className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500"
+                  onClick={() => {
+                    const message = language === "es" 
+                      ? "¡Hola! Me interesa solicitar una cotización para los servicios estándar de Solvers AI. Por favor, envíenme más información y precios."
+                      : "Hello! I'm interested in requesting a quote for Solvers AI standard services. Please send me more information and pricing."
+                    handleWhatsAppContact(message)
+                  }}
+                >
                   {t.pricing.free.cta}
                 </Button>
               </CardContent>
@@ -805,7 +812,15 @@ export default function SolversAILanding() {
                   ))}
                 </ul>
 
-                <Button className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500">
+                <Button 
+                  className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500"
+                  onClick={() => {
+                    const message = language === "es" 
+                      ? "¡Hola! Me interesa el servicio profesional de Solvers AI. Me gustaría agendar una consulta para conocer más detalles sobre esta solución para mi club."
+                      : "Hello! I'm interested in Solvers AI professional service. I would like to schedule a consultation to learn more details about this solution for my club."
+                    handleWhatsAppContact(message)
+                  }}
+                >
                   {t.pricing.pro.cta}
                 </Button>
               </CardContent>
@@ -834,7 +849,15 @@ export default function SolversAILanding() {
                   ))}
                 </ul>
 
-                <Button className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500">
+                <Button 
+                  className="w-full font-open-sans font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-lg border border-blue-500"
+                  onClick={() => {
+                    const message = language === "es" 
+                      ? "¡Hola! Me interesa conocer más sobre los servicios personalizados de Solvers AI. Necesito una solución a medida para mi cadena de clubes."
+                      : "Hello! I'm interested in learning more about Solvers AI custom services. I need a tailored solution for my club chain."
+                    handleWhatsAppContact(message)
+                  }}
+                >
                   {t.pricing.enterprise.cta}
                 </Button>
               </CardContent>
@@ -910,6 +933,12 @@ export default function SolversAILanding() {
           <Button
             size="lg"
             className="bg-blue-600 text-white hover:bg-blue-700 font-open-sans font-semibold mb-4 shadow-xl border-2 border-blue-500"
+            onClick={() => {
+              const message = language === "es" 
+                ? "¡Hola! Estoy listo para revolucionar mi club con Solvers AI. Me gustaría comenzar ahora y conocer todos los detalles del proceso."
+                : "Hello! I'm ready to revolutionize my club with Solvers AI. I would like to start now and learn all the details of the process."
+              handleWhatsAppContact(message)
+            }}
           >
             <TrendingUp className="mr-2 w-5 h-5" />
             {t.cta.button}
@@ -920,16 +949,15 @@ export default function SolversAILanding() {
         </div>
       </section>
 
-      <div className="fixed bottom-4 right-4 z-50 md:hidden">
+      <div className="fixed bottom-4 right-4 z-50">
         <Button
           className="bg-green-600 text-white hover:bg-green-700 shadow-xl font-open-sans font-semibold border-2 border-green-500 rounded-full w-14 h-14 p-0"
           onClick={() => {
             const message =
               language === "es"
-                ? "¡Hola! Me interesa conocer más sobre Solvers AI para mi club de pádel."
-                : "Hello! I'm interested in learning more about Solvers AI for my paddle club."
-            const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`
-            window.open(whatsappUrl, "_blank")
+                ? "¡Hola! Me interesa conocer más sobre Solvers AI para mi club de pádel. ¿Podrían proporcionarme información detallada y asistencia inmediata?"
+                : "Hello! I'm interested in learning more about Solvers AI for my paddle club. Could you provide me with detailed information and immediate assistance?"
+            handleWhatsAppContact(message)
           }}
         >
           <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
