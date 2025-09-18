@@ -4,78 +4,158 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Making the design darker and more sophisticated */
-  --background: oklch(1 0 0); /* Very dark background */
-  --foreground: oklch(0.145 0 0); /* Light text */
-  --card: oklch(1 0 0); /* Dark card */
-  --card-foreground: oklch(0.145 0 0); /* Light card text */
-  --popover: oklch(1 0 0); /* Dark popover */
-  --popover-foreground: oklch(0.145 0 0); /* Light popover text */
-  --primary: oklch(0.205 0 0); /* Light primary */
-  --primary-foreground: oklch(0.985 0 0); /* Dark text on light primary */
-  --secondary: oklch(0.97 0 0); /* Keep accent color */
-  --secondary-foreground: oklch(0.205 0 0); /* White text on accent */
-  --muted: oklch(0.97 0 0); /* Dark muted */
-  --muted-foreground: oklch(0.556 0 0); /* Muted text */
-  --accent: oklch(0.97 0 0); /* Vibrant accent */
-  --accent-foreground: oklch(0.205 0 0); /* White text on accent */
+  /* High-ticket Solvers AI color palette */
+  --c-deep: #014086;
+  --c-cyan: #099CE0;
+  --c-ink: #303030;
+  --c-ivory: #F0E5E8;
+  --c-lime: #b7ff5c;
+  --c-blue: #51a2ff;
+  --c-white: #ffffff;
+  
+  --background: var(--c-ink);
+  --foreground: var(--c-ivory);
+  --card: rgba(48, 48, 48, 0.6);
+  --card-foreground: var(--c-ivory);
+  --popover: var(--c-ink);
+  --popover-foreground: var(--c-ivory);
+  --primary: var(--c-deep);
+  --primary-foreground: var(--c-white);
+  --secondary: var(--c-cyan);
+  --secondary-foreground: var(--c-white);
+  --muted: rgba(48, 48, 48, 0.5);
+  --muted-foreground: rgba(240, 229, 232, 0.7);
+  --accent: var(--c-lime);
+  --accent-foreground: var(--c-ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0); /* Dark border */
-  --input: oklch(0.922 0 0); /* Dark input */
-  --ring: oklch(0.708 0 0); /* Accent ring */
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: var(--c-lime);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: var(--c-ink);
+  --sidebar-foreground: var(--c-ivory);
+  --sidebar-primary: var(--c-deep);
+  --sidebar-primary-foreground: var(--c-white);
+  --sidebar-accent: var(--c-cyan);
+  --sidebar-accent-foreground: var(--c-white);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--c-lime);
 }
 
 .dark {
-  --background: oklch(0.145 0 0); /* Even darker for dark mode */
-  --foreground: oklch(0.985 0 0); /* Brighter text */
-  --card: oklch(0.145 0 0); /* Darker card */
-  --card-foreground: oklch(0.985 0 0); /* Brighter card text */
-  --popover: oklch(0.145 0 0); /* Darker popover */
-  --popover-foreground: oklch(0.985 0 0); /* Brighter popover text */
-  --primary: oklch(0.985 0 0); /* Brighter primary */
-  --primary-foreground: oklch(0.205 0 0); /* Darker text on light primary */
-  --secondary: oklch(0.269 0 0); /* Keep accent color */
-  --secondary-foreground: oklch(0.985 0 0); /* White text on accent */
-  --muted: oklch(0.269 0 0); /* Darker muted */
-  --muted-foreground: oklch(0.708 0 0); /* Muted text */
-  --accent: oklch(0.269 0 0); /* Keep accent color */
-  --accent-foreground: oklch(0.985 0 0); /* White text on accent */
+  --background: var(--c-ink);
+  --foreground: var(--c-white);
+  --card: rgba(48, 48, 48, 0.8);
+  --card-foreground: var(--c-white);
+  --popover: var(--c-ink);
+  --popover-foreground: var(--c-white);
+  --primary: var(--c-lime);
+  --primary-foreground: var(--c-ink);
+  --secondary: var(--c-cyan);
+  --secondary-foreground: var(--c-white);
+  --muted: rgba(48, 48, 48, 0.6);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: var(--c-lime);
+  --accent-foreground: var(--c-ink);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0); /* Darker border */
-  --input: oklch(0.269 0 0); /* Darker input */
-  --ring: oklch(0.439 0 0); /* Accent ring */
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: var(--c-lime);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --sidebar: var(--c-ink);
+  --sidebar-foreground: var(--c-white);
+  --sidebar-primary: var(--c-deep);
+  --sidebar-primary-foreground: var(--c-white);
+  --sidebar-accent: var(--c-cyan);
+  --sidebar-accent-foreground: var(--c-white);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--c-lime);
 }
 
-/* Adding sophisticated animations and visual effects */
+/* High-ticket Solvers AI Design System */
+
+/* Typography */
+.font-title {
+  font-family: var(--font-allerta-stencil), monospace;
+  color: var(--c-lime);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.font-body {
+  font-family: 'Klein', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  color: var(--c-ivory);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--c-lime);
+  color: var(--c-ink);
+}
+
+/* Button system */
+.btn {
+  @apply inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-base font-semibold transition-all duration-300 disabled:opacity-50 cursor-pointer border-0;
+  font-family: var(--font-allerta-stencil), monospace;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--c-lime), #dfff88);
+  color: var(--c-ink);
+  box-shadow: 0 8px 24px rgba(183, 255, 92, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(183, 255, 92, 0.4);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--c-ivory);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--c-lime);
+  color: var(--c-lime);
+  transform: translateY(-2px);
+}
+
+/* Card system */
+.card {
+  @apply rounded-3xl p-6 backdrop-blur-sm transition-all duration-300;
+  background: rgba(48, 48, 48, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  background: rgba(48, 48, 48, 0.8);
+  border-color: rgba(183, 255, 92, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Divider line */
+.xline {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  height: 1px;
+}
+
+/* Advanced animations */
 @keyframes float {
   0%,
   100% {
@@ -86,13 +166,13 @@
   }
 }
 
-@keyframes pulse-glow {
+@keyframes pulse-glow-lime {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 20px rgba(183, 255, 92, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 0 40px rgba(183, 255, 92, 0.6);
   }
 }
 
@@ -119,12 +199,28 @@
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes court-glow {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: brightness(1) contrast(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: brightness(1.2) contrast(1.1);
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+.animate-pulse-glow-lime {
+  animation: pulse-glow-lime 2s ease-in-out infinite;
 }
 
 .animate-gradient {
@@ -136,25 +232,53 @@
   animation: slide-in-up 0.6s ease-out;
 }
 
-/* Adding sophisticated background patterns */
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-court-glow {
+  animation: court-glow 6s ease-in-out infinite;
+}
+
+/* Background patterns */
 .bg-grid-pattern {
-  background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(183, 255, 92, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183, 255, 92, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .bg-dot-pattern {
-  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.2) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(183, 255, 92, 0.2) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* Adding font utility classes for Montserrat and Open Sans */
-.font-montserrat {
-  font-family: var(--font-montserrat), sans-serif;
+/* Font utility classes */
+.font-allerta-stencil {
+  font-family: var(--font-allerta-stencil), monospace;
 }
 
-.font-open-sans {
-  font-family: var(--font-open-sans), sans-serif;
+/* Court lighting effect */
+.court-lighting {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(183, 255, 92, 0.15) 0%, 
+    rgba(81, 162, 255, 0.1) 25%, 
+    rgba(1, 64, 134, 0.05) 50%, 
+    transparent 70%);
+}
+
+/* Magnetic button effect */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Interactive elements */
+.interactive-hover {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.interactive-hover:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: brightness(1.1);
 }
 
 @theme inline {

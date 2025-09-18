@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Montserrat } from "next/font/google"
 import { Open_Sans } from "next/font/google"
+import { Allerta_Stencil } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
@@ -20,6 +21,11 @@ const openSans = Open_Sans({
   weight: ["400", "600"],
 })
 
+const allertaStencil = Allerta_Stencil({
+  subsets: ["latin"],
+  variable: "--font-allerta-stencil",
+  weight: ["400"],
+})
 export const metadata: Metadata = {
   title: "Solvers AI - Automatización Inteligente para Clubes de Pádel",
   description:
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${openSans.variable} antialiased`}
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${openSans.variable} ${allertaStencil.variable} antialiased`}
       >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
