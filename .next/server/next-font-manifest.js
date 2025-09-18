@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/project/app/layout\":[\"static/media/1d8c539aeefaf5c6-s.p.woff2\",\"static/media/904be59b21bd51cb-s.p.woff2\",\"static/media/e807dee2426166ad-s.p.woff2\",\"static/media/5b01f339abf2f1a5.p.woff2\",\"static/media/028c0d39d2e8f589-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
