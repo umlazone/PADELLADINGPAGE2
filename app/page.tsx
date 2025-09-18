@@ -43,48 +43,6 @@ const SolversAIPadelLanding = () => {
     return () => window.removeEventListener('mousemove', updateMousePosition);
   }, []);
 
-  const FloatingBall = () => {
-    const ballX = useMotionValue(0);
-    const ballY = useMotionValue(0);
-    const springX = useSpring(ballX, { stiffness: 150, damping: 15 });
-    const springY = useSpring(ballY, { stiffness: 150, damping: 15 });
-
-    useEffect(() => {
-      ballX.set(mousePosition.x - 24);
-      ballY.set(mousePosition.y - 24);
-    }, [mousePosition, ballX, ballY]);
-
-    return (
-      <motion.div
-        className="fixed w-12 h-12 pointer-events-none z-[60] mix-blend-screen"
-        style={{ x: springX, y: springY }}
-        animate={{ 
-          scale: [1, 1.1, 1],
-          rotate: [0, 5, -5, 0]
-        }}
-        transition={{ 
-          scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-        }}
-      >
-        <div 
-          className="w-full h-full rounded-full shadow-2xl animate-pulse-glow-lime"
-          style={{
-            background: "radial-gradient(circle at 30% 30%, #ffffff 0%, #b7ff5c 15%, #9fcf1a 60%, #5a6b00 100%)",
-            boxShadow: "0 0 30px rgba(183, 255, 92, 0.6), inset 0 2px 8px rgba(255, 255, 255, 0.3)"
-          }}
-        >
-          {/* Tennis ball lines */}
-          <div className="absolute inset-0 rounded-full">
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white/40 transform -translate-y-1/2 rounded-full" />
-            <div className="absolute left-1/2 top-2 bottom-2 w-0.5 bg-white/40 transform -translate-x-1/2 rounded-full" style={{
-              clipPath: "polygon(0 0, 100% 0, 100% 40%, 0 40%, 0 60%, 100% 60%, 100% 100%, 0 100%)"
-            }} />
-          </div>
-        </div>
-      </motion.div>
-    );
-  };
 
   const Magnetic = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -307,7 +265,6 @@ const SolversAIPadelLanding = () => {
 
   return (
     <div className="min-h-screen bg-[var(--c-ink)] font-body overflow-x-hidden" style={{ backgroundColor: 'var(--c-ink)' }}>
-      <FloatingBall />
 
       {/* Fixed WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-[100]">
@@ -391,10 +348,10 @@ const SolversAIPadelLanding = () => {
               exit={{ opacity: 0, height: 0 }}
             >
               <div className="flex flex-col space-y-4 pt-4">
-                {["Valor", "Soluciones", "Showreel", "Casos", "Proceso", "Contacto"].map((item) => (
+                {["Valor", "Soluciones", "Sistema de Dos Manos", "Casos", "Proceso", "Contacto"].map((item) => (
                   <a
                     key={item}
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item === "Sistema de Dos Manos" ? "sistema-dos-manos" : item.toLowerCase()}`}
                     className="font-body text-white/80 hover:text-[var(--c-lime)] transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -464,10 +421,10 @@ const SolversAIPadelLanding = () => {
               </Magnetic>
               <button 
                 className="btn btn-outline text-lg px-10 py-4"
-                onClick={() => document.getElementById('showreel')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('sistema-dos-manos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Play className="mr-2" />
-                VER SHOWREEL
+                VER SISTEMA
               </button>
             </motion.div>
 
