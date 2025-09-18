@@ -919,10 +919,10 @@ const SolversAIPadelLanding = () => {
             </Magnetic>
             <button 
               className="btn btn-outline text-lg px-12 py-4"
-              onClick={() => document.getElementById('showreel')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('sistema-dos-manos')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Play className="mr-2" />
-              VER SHOWREEL
+              VER SISTEMA
             </button>
           </motion.div>
 
