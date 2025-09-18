@@ -823,6 +823,9 @@ font-weight: 100 900;
   .z-\[100\] {
     z-index: 100;
   }
+  .z-\[1000\] {
+    z-index: 1000;
+  }
   .col-start-2 {
     grid-column-start: 2;
   }
@@ -2028,6 +2031,9 @@ font-weight: 100 900;
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-32 {
+    padding-top: calc(var(--spacing) * 32);
   }
   .pr-1 {
     padding-right: calc(var(--spacing) * 1);
