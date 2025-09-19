@@ -5487,8 +5487,10 @@ font-weight: 100 900;
   box-shadow: none;
 }
 .btn-primary:hover {
+  background: var(--c-blue);
+  color: var(--c-white);
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(183, 255, 92, 0.4);
+  box-shadow: 0 8px 24px rgba(81, 162, 255, 0.4);
 }
 .btn-outline {
   border: 1px solid rgba(255, 255, 255, 0.2);
