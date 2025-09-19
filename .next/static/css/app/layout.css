@@ -5481,9 +5481,10 @@ font-weight: 100 900;
   font-family: var(--font-allerta-stencil), monospace;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--c-lime), #dfff88);
-  color: var(--c-ink);
-  box-shadow: 0 8px 24px rgba(183, 255, 92, 0.3);
+  background: transparent;
+  color: var(--c-white);
+  border: 2px solid var(--c-blue);
+  box-shadow: none;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
