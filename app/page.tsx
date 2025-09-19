@@ -225,13 +225,19 @@ const SolversAIPadelLanding = () => {
   };
 
   const LightingEffect = ({ children, mousePosition }: { children: React.ReactNode; mousePosition: { x: number; y: number } }) => {
+    const [windowDimensions, setWindowDimensions] = useState({ width: 0, height: 0 });
+
+    useEffect(() => {
+      setWindowDimensions({ width: window.innerWidth, height: window.innerHeight });
+    }, []);
+
     return (
       <div 
         className="relative"
-        style={{
-          '--mouse-x': `${(mousePosition.x / window.innerWidth) * 100}%`,
-          '--mouse-y': `${(mousePosition.y / window.innerHeight) * 100}%`,
-        } as React.CSSProperties}
+        style={windowDimensions.width > 0 ? {
+          '--mouse-x': `${(mousePosition.x / windowDimensions.width) * 100}%`,
+          '--mouse-y': `${(mousePosition.y / windowDimensions.height) * 100}%`,
+        } as React.CSSProperties : {}}
       >
         <div className="absolute inset-0 court-lighting opacity-60" />
         {children}
