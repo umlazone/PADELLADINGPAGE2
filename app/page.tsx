@@ -615,7 +615,20 @@ const SolversAIPadelLanding = () => {
 
       {/* Video Section */}
       <section className="py-20 relative">
-        <VideoBackground src="/video/padel-demo.mp4" poster="/assets/PADEL IMAGE2.jpg" />
+        <div className="absolute inset-0 overflow-hidden">
+  <video
+    className="w-full h-full object-cover animate-court-glow"
+    autoPlay
+    muted
+    loop
+    playsInline
+    poster="/assets/PADEL IMAGE2.jpg"
+    preload="metadata"
+  >
+    <source src="/video/padel-demo.mp4" type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+</div>
         <div className="relative z-10 text-center py-20">
           <motion.h3
             className="font-title text-4xl mb-8"
