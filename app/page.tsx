@@ -189,7 +189,7 @@ const SolversAIPadelLanding = () => {
               onError={() => setHasError(true)}
               preload="metadata"
             >
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/dqrmgsgol/video/upload/v1758329159/V%C3%ADdeo_Promocional_Club_de_P%C3%A1del_Moderno_Azul_Amarillo_hekqm0.mp4" type="video/mp4" />
             </video>
             <button 
               onClick={togglePlay}
